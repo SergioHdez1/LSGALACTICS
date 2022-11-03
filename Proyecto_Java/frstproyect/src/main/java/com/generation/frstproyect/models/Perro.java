@@ -1,33 +1,45 @@
-package com.generation.demo.models;
+package com.generation.frstproyect.models;
 
 public class Perro {
-    private String nombre;
-    private String pelaje;
-    private String raza;
+    private String nombre,pelaje,raza;
     private Boolean vacunado;
     
+
+    
+
     public Perro() {
     }
 
-    public Perro(String nombre, String pelaje, String raza, Boolean vacunado) {
+    public Perro(String nombre,String pelaje,String raza, Boolean vacunado){
         this.nombre = nombre;
         this.pelaje = pelaje;
         this.raza = raza;
         this.vacunado = vacunado;
+        
     }
 
-    public Perro(String nombre, String pelaje) {
+    public Perro(String nombre,String pelaje){
         this.nombre = nombre;
         this.pelaje = pelaje;
-        this.raza = "Quiltro";
+        this.raza = "Poodle";
         this.vacunado = false;
+        
     }
 
-    //con esto yo ingreso y obtengo el nombre de mi perro (método get)
+    public Perro(String nombre,String pelaje,String raza){
+        this.nombre = nombre;
+        this.pelaje = pelaje;
+        this.raza = raza;
+        this.vacunado = false;
+    }
+    
+  
+
+    // Ingreso y obtengo el nombre de mi perro (método get)
     public String getNombre(){
         return nombre;
     }
-    //con este MODIFICO el nombre de mi perro(método set)
+    //Modifico el nombre de mi perro (método set)
     public void setNombre(String nombre){
         this.nombre = nombre;
     }
@@ -50,6 +62,10 @@ public class Perro {
         this.vacunado = vacunado;
     }
 
+    
+
+
+
     public void ladrar(){
         System.out.println("guau");
     }
@@ -63,8 +79,8 @@ public class Perro {
             return "doy la pata";
         }
         return "no hago nada :c";
-    }
 
+    }
     public Boolean adopcion(){
         if(this.vacunado){
             return true;
@@ -77,5 +93,7 @@ public class Perro {
     public String toString() {
         return "Perro [nombre=" + nombre + ", pelaje=" + pelaje + ", raza=" + raza + ", vacunado=" + vacunado + "]";
     }
+
     
+
 }

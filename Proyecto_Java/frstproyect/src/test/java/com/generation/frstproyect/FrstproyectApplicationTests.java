@@ -1,10 +1,10 @@
-package com.generation.demo;
+package com.generation.frstproyect;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class FrstproyectApplicationTests {
 
 	@Test
 	void contextLoads() {
