@@ -51,40 +51,25 @@ public class Usuarios {
     }
 
     public String iniciarSesion (String userName, String contrasenia){
-        if (userName != this.nombreUsuario || contrasenia != this.password){
+        try {
+            if (userName != this.nombreUsuario || contrasenia != this.password){
+                return "Usuario o contrasenia incorrecta";
+            } 
+            return "Sesion iniciada correctamente";            
+        } catch (Exception e) {
+            // TODO: handle exception
             return "Usuario o contrasenia incorrecta";
-        } 
-        return "Sesion iniciada correctamente";
+        }
     }
 
     public void cerrarSesion (){
         System.out.println("Sesion Finalizada");
     }
 
-    
-    
-
-
-
-
 
     @Override
     public String toString() {
         return "Usuarios [nombre=" + nombre + ", correo=" + correo + ", fechaNac=" + fechaNac + ", nombreUsuario="
                 + nombreUsuario + "]";
-    }
-
-
-    
-    
-
-    
-    
-
-    
-
-    
-
-    
-    
+    }    
 }

@@ -10,8 +10,11 @@ public class UsuarioAdmin extends Usuarios{
         super(nombre, correo, fechaNac, password, nombreUsuario);
     }
 
-    public void eliminarCuentas (){
-        System.out.println("Pum te elimino");
+    public String eliminarCuentas (Usuarios usuario) {
+        if(usuario.getNombreUsuario() == this.getNombreUsuario()) {
+            return "no te puedes eliminar a ti mismo";
+        }
+        return "usuario eliminado";
     }
 
     public void eliminarPublicacion (){

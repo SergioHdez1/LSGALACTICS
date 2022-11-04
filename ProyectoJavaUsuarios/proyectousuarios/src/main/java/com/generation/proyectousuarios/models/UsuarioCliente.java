@@ -29,8 +29,8 @@ public class UsuarioCliente extends Usuarios{
         System.out.println("Tu reporte a "+usuario+" ha sido recibida");
     }
 
-    public void crearPartido (){
-        System.out.println("Quien pa su pichanga");
+    public String crearPartido (String lugar){
+        return "Te buscaremos amigos para jugar";
     }
 
     public void ingresarTicket (String ticket) {
@@ -39,6 +39,18 @@ public class UsuarioCliente extends Usuarios{
 
     public void ingresarAEquipo (){
         System.out.println("Llego el queso");
+    }
+
+    public String pelota(Boolean hayPelota) {
+        try {
+            if(hayPelota) {
+                return "hay balón";
+            }
+            return "quién saca balón";            
+        } catch (Exception e) {
+            // TODO: handle exception
+            return "no se si hay balón";
+        }
     }
     
     @Override

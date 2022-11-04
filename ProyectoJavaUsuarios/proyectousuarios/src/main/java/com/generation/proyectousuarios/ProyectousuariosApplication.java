@@ -13,6 +13,7 @@ public class ProyectousuariosApplication {
 	public static void main(String[] args) {
 		/* SpringApplication.run(ProyectousuariosApplication.class, args); */
 
+		Usuarios userNulo = new Usuarios();
 		UsuarioCliente sergio = new UsuarioCliente();
 		System.out.println(sergio);
 
@@ -35,8 +36,8 @@ public class ProyectousuariosApplication {
 		System.out.println(var);
 		
 		System.out.println(benjamin.iniciarSesion("benj", "contrasenia"));
-		francisca.eliminarCuentas();
-		paula.crearPartido();
+		francisca.eliminarCuentas(userNulo);
+		paula.crearPartido("happyland");
 
 		
 	}
